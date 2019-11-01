@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- 先把爹整进来 -->
+	<parent>
+		<groupId>cn.maytek</groupId>
+		<artifactId>library</artifactId>
+		<version>2.0.3</version>
+	</parent>
+
+	<!-- 如果因为 groupId 和 引用的 parent 的 groupId 一样 引起报错, 可以删除该 groupId 配置 <groupId>cn.maytek</groupId> -->
+	<artifactId>word_to_pdf</artifactId>
+	<version>2.0.0</version> <!-- 此处因为版本号和parent一样 所以要么删掉该行配置, 要么该表一下版本号(此处我改为了2.0.2) 不然会提示警告 -->
+	<packaging>jar</packaging>
+
+	<!-- 依赖的jar包们 -->
+	<dependencies>
+
+		<!-- 一个节点是一个jar包 -->
+		<dependency>
+			<groupId>cn.maytek</groupId>
+			<artifactId>maytek</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+	</dependencies>
+</project>
